@@ -45,7 +45,10 @@ public class DrawBrain : MonoBehaviour {
                     if (drawHandles)                                                                                                        // Udělej popisky
                     {
                         Vector3 handlePos = drawnNeurons[x][y].transform.position + new Vector3(0.5F, 0, -1);
-                        UnityEditor.Handles.Label(handlePos, System.Convert.ToString(brainToDraw.neuronLayers[x][y].output()), st);
+
+                        if (Application.isEditor) {
+						//	UnityEditor.Handles.Label(handlePos, System.Convert.ToString(brainToDraw.neuronLayers[x][y].output()), st);
+                        }
                     }
                     Color neuronColor = new Color(1, Mathf.Clamp01((brainToDraw.neuronLayers[x][y].output() + 1) / 2), 0);                  // Změň barvu neuronu
                     drawnNeurons[x][y].GetComponent<Renderer>().material.color = neuronColor;
