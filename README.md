@@ -1,9 +1,8 @@
 # NeuralNetworksSteering
 NN with GA that teaches blocks to drive through a maze. 
 
-<Warning>
-This project was done back in the days. As a high scooler I did not have any formal programming education. Expect some spaghetti code.
-</Warning>
+>This project was done back in the days. As a high scooler I did not have any formal programming education. Expect some spaghetti code.
+
 
 ## Live demo
 Compiled WEBGL build is available at:
